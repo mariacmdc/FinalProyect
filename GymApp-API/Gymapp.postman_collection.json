@@ -1,0 +1,246 @@
+{
+	"info": {
+		"_postman_id": "13cfa0f5-6455-4f87-a80f-baa6d419ead8",
+		"name": "Gymapp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28880072",
+		"_collection_link": "https://warped-water-263283.postman.co/workspace/My-Workspace~65a4aa91-9b8f-4dfb-8a68-49a23d85a92b/collection/28607427-13cfa0f5-6455-4f87-a80f-baa6d419ead8?action=share&source=collection_link&creator=28880072"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"insertaelnombre1\",\n    \"email\": \"insertaelmail1@gmail.com\",\n    \"password\": \"XXXX\",\n    \"role\": \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"insertaelmail1@gmail.com\",\n    \"password\": \"XXXX\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Activities",
+			"item": [
+				{
+					"name": "New Activity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"sit ups\",\r\n    \"description\": \"Lower your body to the ground and then push it upwards\",\r\n    \"image\": \"image.gif\",\r\n    \"typology\": \"Performance\",\r\n    \"muscleGroup\": \"Several muscles of the upper body\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/activity",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"activity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get activity",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/activity/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"activity",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modify activity",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"flex\",\r\n    \"description\": \"Lower your body to the ground and then push it upwards\",\r\n    \"image\": \"image.gif\",\r\n    \"typology\": \"Performance\",\r\n    \"muscleGroup\": \"Several muscles of the upper body\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/activity/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"activity",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete activity",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/activity/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"activity",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Likes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6ImNsaWVudCIsImlhdCI6MTY5MjY0MDM3MSwiZXhwIjoxNjk1MjMyMzcxfQ.Lfy9RuiCBHbic_B72p7g6FtHG2BmEGRJ2w1JDOnHQM0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/activities/1/like",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"activities",
+								"1",
+								"like"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
